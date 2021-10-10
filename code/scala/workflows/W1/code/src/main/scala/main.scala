@@ -11,10 +11,7 @@ import graph._
 object Main {
 
   def apply(spark: SparkSession): Unit = {
-    val df_join_0_out_0  = join_0(spark)
     val df_source_0_out0 = source_0(spark)
-    df_join_0_out_0.cache().count()
-    df_join_0_out_0.unpersist()
     df_source_0_out0.cache().count()
     df_source_0_out0.unpersist()
   }
