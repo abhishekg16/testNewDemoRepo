@@ -111,6 +111,51 @@
         "isNewDataset" : false,
         "datasetType" : "File"
       }
+    },
+    "Join_1978" : {
+      "id" : "Join_1978",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_0",
+        "slug" : "join_0",
+        "x" : 59,
+        "y" : 35,
+        "language" : "scala"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "63849",
+          "slug" : "in0"
+        }, {
+          "id" : "30076",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "93289",
+          "slug" : "out_0"
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "scala",
+            "expression" : ""
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "target" : "",
+          "expression" : {
+            "format" : "scala",
+            "expression" : ""
+          },
+          "description" : ""
+        } ]
+      }
     }
   },
   "ports" : {
