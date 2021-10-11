@@ -11,8 +11,585 @@
     "codeMode" : "sparse",
     "buildSystem" : "maven"
   },
-  "connections" : [ ],
-  "processes" : { },
+  "connections" : [ {
+    "id" : "759",
+    "source" : "Source_99494",
+    "sourcePort" : "45011",
+    "target" : "Reformat_93491",
+    "targetPort" : "80239"
+  }, {
+    "id" : "100",
+    "source" : "Reformat_93491",
+    "sourcePort" : "61368",
+    "target" : "MyNewLimit_90101",
+    "targetPort" : "49766"
+  }, {
+    "id" : "245",
+    "source" : "MyNewLimit_90101",
+    "sourcePort" : "93169",
+    "target" : "Filter_95234",
+    "targetPort" : "43476"
+  }, {
+    "id" : "930",
+    "source" : "Filter_95234",
+    "sourcePort" : "92619",
+    "target" : "Filter_20250",
+    "targetPort" : "20903"
+  } ],
+  "processes" : {
+    "Filter_95234" : {
+      "id" : "Filter_95234",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_0",
+        "slug" : "filter_0",
+        "x" : 848,
+        "y" : 62,
+        "language" : "scala"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "43476",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "first_name",
+              "type" : "integer",
+              "nullable" : false,
+              "metadata" : { }
+            } ]
+          }
+        } ],
+        "outputs" : [ {
+          "id" : "92619",
+          "slug" : "out_0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "first_name",
+              "type" : "integer",
+              "nullable" : false,
+              "metadata" : { }
+            } ]
+          }
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "scala",
+          "expression" : "lit(true)"
+        }
+      }
+    },
+    "Filter_20250" : {
+      "id" : "Filter_20250",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_1",
+        "slug" : "filter_1",
+        "x" : 1069,
+        "y" : 88,
+        "language" : "scala"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "20903",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "first_name",
+              "type" : "integer",
+              "nullable" : false,
+              "metadata" : { }
+            } ]
+          }
+        } ],
+        "outputs" : [ {
+          "id" : "80396",
+          "slug" : "out_0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "first_name",
+              "type" : "integer",
+              "nullable" : false,
+              "metadata" : { }
+            } ]
+          }
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "scala",
+          "expression" : "lit(true)"
+        }
+      }
+    },
+    "Reformat_93491" : {
+      "id" : "Reformat_93491",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_0",
+        "slug" : "reformat_0",
+        "x" : 473,
+        "y" : 115,
+        "language" : "scala"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "80239",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            } ]
+          }
+        } ],
+        "outputs" : [ {
+          "id" : "61368",
+          "slug" : "out_0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "first_name",
+              "type" : "integer",
+              "nullable" : false,
+              "metadata" : { }
+            } ]
+          }
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "80239##customer_id", "80239##email", "80239##account_flags", "80239##phone" ],
+        "expressions" : [ {
+          "target" : "customer_id",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"customer_id\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "email",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"email\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "account_flags",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"account_flags\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "phone",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"phone\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "first_name",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "when(\n    col(\"customer_id\") === lit(1), lit(1)\n).when(\n    col(\"customer_id\") === lit(1), lit(1)\n).otherwise(\n    lit(1)\n)"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "Source_99494" : {
+      "id" : "Source_99494",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Source_0",
+        "slug" : "source_0",
+        "x" : 298,
+        "y" : 148,
+        "language" : "scala"
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "45011",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            } ]
+          }
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "format" : "csv",
+        "datasetTypes" : [ {
+          "label" : "FILE",
+          "value" : "File",
+          "icon" : "File"
+        }, {
+          "label" : "WAREHOUSE",
+          "value" : "Warehouse",
+          "icon" : "File"
+        }, {
+          "label" : "CATALOG TABLE",
+          "value" : "Database",
+          "icon" : "Database"
+        } ],
+        "dataFormats" : [ {
+          "label" : "CSV",
+          "value" : "csv",
+          "icon" : "Csv"
+        }, {
+          "label" : "JSON",
+          "value" : "json",
+          "icon" : "Json"
+        }, {
+          "label" : "PARQUET",
+          "value" : "parquet",
+          "icon" : "Parquet"
+        }, {
+          "label" : "AVRO",
+          "value" : "avro",
+          "icon" : "File"
+        }, {
+          "label" : "DELTA",
+          "value" : "delta",
+          "icon" : "Delta"
+        }, {
+          "label" : "ORC",
+          "value" : "orc",
+          "icon" : "File"
+        }, {
+          "label" : "TEXT",
+          "value" : "text",
+          "icon" : "Document"
+        } ],
+        "datasetId" : "125",
+        "dataset" : {
+          "path" : "dbfs:/Prophecy/abhishek@prophecy12.io/CustomersDatasetInput.csv",
+          "separator" : ",",
+          "inferSchema" : true,
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            } ]
+          },
+          "header" : true
+        },
+        "isNewDataset" : false,
+        "datasetType" : "File"
+      }
+    },
+    "MyNewLimit_90101" : {
+      "id" : "MyNewLimit_90101",
+      "component" : "MyNewLimit",
+      "metadata" : {
+        "label" : "MyNewLimit_0",
+        "slug" : "my_new_limit_0",
+        "x" : 692,
+        "y" : 63,
+        "language" : "scala"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "49766",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "first_name",
+              "type" : "integer",
+              "nullable" : false,
+              "metadata" : { }
+            } ]
+          }
+        } ],
+        "outputs" : [ {
+          "id" : "93169",
+          "slug" : "out_0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : { }
+            }, {
+              "name" : "first_name",
+              "type" : "integer",
+              "nullable" : false,
+              "metadata" : { }
+            } ]
+          }
+        } ],
+        "selectedInputFields" : [ ]
+      },
+      "properties" : {
+        "limit" : "10"
+      }
+    }
+  },
   "ports" : {
     "inputs" : [ ],
     "outputs" : [ ],
