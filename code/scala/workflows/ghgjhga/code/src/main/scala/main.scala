@@ -12,7 +12,7 @@ object Main {
 
   def apply(spark: SparkSession): Unit = {
     val df_source_0_out = source_0(spark)
-    val df_filter_0_out = filter_0(spark)
+    val df_filter_0_out = filter_0(spark, df_source_0_out)
   }
 
   def main(args: Array[String]): Unit = {
