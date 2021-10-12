@@ -211,14 +211,7 @@
       },
       "properties" : {
         "columnsSelector" : [ ],
-        "expressions" : [ {
-          "target" : "",
-          "expression" : {
-            "format" : "scala",
-            "expression" : ""
-          },
-          "description" : ""
-        } ]
+        "expressions" : [ ]
       }
     },
     "Filter_60022" : {
