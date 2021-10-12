@@ -282,10 +282,10 @@
       },
       "properties" : {
         "columnsSelector" : [ ],
-        "condition" : "(col(\"phone\") > 10) &&\n\n\n (col(\"phone\") > 10)",
+        "condition" : "(col(\"phone\") > 10) \n&& \n         (col(\"phone\") > 10)",
         "cleanCondition" : {
           "format" : "scala",
-          "expression" : "(col(\"phone\") > 10) &&\n\n\n (col(\"phone\") > 10)"
+          "expression" : "(col(\"phone\") > 10) \n&& \n         (col(\"phone\") > 10)"
         }
       }
     }
